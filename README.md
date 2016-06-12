@@ -8,4 +8,4 @@ Abra el archivo `example.tex`, modifique los parámetros básicos (curso, año, 
 
 ## Requisitos
 
-La clase `utfsm-exam` está basada (y requiere) en la clase LaTeX `exam`.
+La clase `utfsm-exam` está basada en (y requiere de) la clase LaTeX `exam`.

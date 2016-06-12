@@ -5,9 +5,8 @@
 %    answers        % Activar para mostrar las respuestas!
 ]{utfsm-exam}
 
-\usepackage[utf8x]{inputenc}
-%\usepackage[latin1]{inputenc}      % Windons (or MacOS with Mac Roman)
-%\geometry{papersize={8.5in,13in},total={6.5in,11in}}   % Tamaño oficio
+\usepackage[utf8x]{inputenc}        % Linux or MacOS (with UTF-8)
+%\usepackage[latin1]{inputenc}       % Windows (or MacOS with Mac Roman).
 
 \newcommand{\curso}{Introducción al Latex}
 \newcommand{\certamenNr}{\#1}      % ej. #1, #2, Recuparativo, Final
@@ -16,22 +15,27 @@
 \newcommand{\profesor}{Nombre del Profesor(a)}
 \newcommand{\ayudante}{Nombre del Ayudante}
 
+%\usepackage{txfonts}                % Times New Roman fonts.
+%\geometry{papersize={8.5in,13in},total={6.5in,11in}}    % Tamaño oficio.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 
-\printHeader{}
+\printHeader{}      % Print first page header
 
 
 %\centering
 %    Este certamen tiene \numquestions\ preguntas, con un total de \numpoints\ puntos.
 
 
+\instrucciones{Responda las preguntas en el espacio reservado para ello.}
+
 \begin{center}\footnotesize
     \gradetable[v][questions]
+    \vspace{10mm}\hrule
 \end{center}
-
-
-\instrucciones{Responda las preguntas en el espacio reservado para ello. No se corregirá fuera de estos márgenes.}
 
 
 \begin{questions}
@@ -51,17 +55,17 @@
     %
     \question Segunda Pregunta.
     \begin{parts}
-        \part[10] Pregunta 2 Sección 1
+        \part[10] Pregunta 2 Sección a.
         \begin{solutionorbox}[2.5cm]
-            Solución a la primera pregunta.
+            Solución a la segunda pregunta-a.
         \end{solutionorbox}
-        \part[10] Pregunta 2 Sección 2
+        \part[10] Pregunta 2 Sección b.
         \begin{solutionorlines}[2.5cm]
-            Solución a la primera pregunta.
+            Solución a la segunda pregunta-b.
         \end{solutionorlines}
-        \part[10] Pregunta 2 Sección 3 
+        \part[10] Pregunta 2 Sección c.
         \begin{solutionordottedlines}[2.5cm]
-            Solución a la primera pregunta.
+            Solución a la segunda pregunta-c.
         \end{solutionordottedlines}
     \end{parts}
 
@@ -76,6 +80,16 @@
     \question[2] \fillin[Rojo][5cm] es mi color favorito.
 
     %
+    \question[4] Preguntas alternativas múltiples en una línea.\\
+    \begin{oneparcheckboxes}
+        \choice John
+        \choice Paul
+        \choice George
+        \choice Ringo
+        \CorrectChoice Socrates
+    \end{oneparcheckboxes}
+    
+    %
     \question[4] Preguntas con alternativas múltiples.
     \begin{choices}
         \choice John
@@ -85,19 +99,6 @@
         \CorrectChoice Socrates
     \end{choices}
     
-    %
-    \question[4] Preguntas alternativas múltiples en una línea.
-    
-    \begin{oneparcheckboxes}
-        \choice John
-        \choice Paul
-        \choice George
-        \choice Ringo
-        \CorrectChoice Socrates
-    \end{oneparcheckboxes}
-        
-    %
-
     
     \uplevel{Esta es la forma de agregar instrucciones entre preguntas y referenciarlas. Ej. ``Las preguntas \ref{exact-start} a la \ref{exact-end} deben se resueltas en detalle.''}
     \question[10]
@@ -108,5 +109,6 @@
     \question[10]
     \label{exact-end}
     $\displaystyle \int_0^{\frac{\pi}{2}} \sin^3 x \cos x \, dx$
+
 \end{questions}
 \end{document}

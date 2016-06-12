@@ -94,7 +94,7 @@
     \begin{center}
     \fbox{
         \fbox{\centering
-            \parbox{5in}{%
+            \parbox{6in}{%
                 \textbf{Instrucciones:}\\#1
             }
         }
