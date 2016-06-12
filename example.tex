@@ -1,0 +1,112 @@
+\documentclass[%
+    11pt,
+    letterpaper,
+    addpoints,
+%    answers        % Activar para mostrar las respuestas!
+]{utfsm-exam}
+
+\usepackage[utf8x]{inputenc}
+%\usepackage[latin1]{inputenc}      % Windons (or MacOS with Mac Roman)
+%\geometry{papersize={8.5in,13in},total={6.5in,11in}}   % Tamaño oficio
+
+\newcommand{\curso}{Introducción al Latex}
+\newcommand{\certamenNr}{\#1}      % ej. #1, #2, Recuparativo, Final
+\newcommand{\programa}{Magister en Ciencias de la Ingeniería Industrial}
+\newcommand{\fecha}{20 de junio de 2016}
+\newcommand{\profesor}{Nombre del Profesor(a)}
+\newcommand{\ayudante}{Nombre del Ayudante}
+
+\begin{document}
+
+
+\printHeader{}
+
+
+%\centering
+%    Este certamen tiene \numquestions\ preguntas, con un total de \numpoints\ puntos.
+
+
+\begin{center}\footnotesize
+    \gradetable[v][questions]
+\end{center}
+
+
+\instrucciones{Responda las preguntas en el espacio reservado para ello. No se corregirá fuera de estos márgenes.}
+
+
+\begin{questions}
+    \shadedsolutions
+    %\bracketedpoints
+    \pointpoints{Punto}{Puntos}
+    \pointsinrightmargin
+    \marginpointname{Pts.}
+    
+    
+    %
+    \question[20] Primera Pregunta.
+    \begin{solutionorbox}[2cm]
+        Solución a la primera pregunta.
+    \end{solutionorbox}
+    
+    %
+    \question Segunda Pregunta.
+    \begin{parts}
+        \part[10] Pregunta 2 Sección 1
+        \begin{solutionorbox}[2.5cm]
+            Solución a la primera pregunta.
+        \end{solutionorbox}
+        \part[10] Pregunta 2 Sección 2
+        \begin{solutionorlines}[2.5cm]
+            Solución a la primera pregunta.
+        \end{solutionorlines}
+        \part[10] Pregunta 2 Sección 3 
+        \begin{solutionordottedlines}[2.5cm]
+            Solución a la primera pregunta.
+        \end{solutionordottedlines}
+    \end{parts}
+
+
+    \question[10]
+    Aproxime $\displaystyle \int_0^1 \sin x^2 \, dx$ hasta $0.001$ de su valor.
+    \vspace{2mm}
+    \begin{solutionorgrid}[3cm]
+    \end{solutionorgrid}
+
+    %
+    \question[2] \fillin[Rojo][5cm] es mi color favorito.
+
+    %
+    \question[4] Preguntas con alternativas múltiples.
+    \begin{choices}
+        \choice John
+        \choice Paul
+        \choice George
+        \choice Ringo
+        \CorrectChoice Socrates
+    \end{choices}
+    
+    %
+    \question[4] Preguntas alternativas múltiples en una línea.
+    
+    \begin{oneparcheckboxes}
+        \choice John
+        \choice Paul
+        \choice George
+        \choice Ringo
+        \CorrectChoice Socrates
+    \end{oneparcheckboxes}
+        
+    %
+
+    
+    \uplevel{Esta es la forma de agregar instrucciones entre preguntas y referenciarlas. Ej. ``Las preguntas \ref{exact-start} a la \ref{exact-end} deben se resueltas en detalle.''}
+    \question[10]
+    \label{exact-start}
+    $\displaystyle \int_0^1 \frac{x^2 \, dx}{\sqrt{1-x^2}}$
+    \question[10]
+    $\displaystyle \int_0^1 \frac{1}{1+x^2}\, dx$
+    \question[10]
+    \label{exact-end}
+    $\displaystyle \int_0^{\frac{\pi}{2}} \sin^3 x \cos x \, dx$
+\end{questions}
+\end{document}
