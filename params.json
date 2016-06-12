@@ -1,0 +1,6 @@
+{
+  "name": "Utfsm-exam",
+  "tagline": "LaTeX template for exams preparation at UTFSM",
+  "body": "# Plantilla LaTeX para Certámenes y Exámenes UTFSM\r\n\r\nPlantilla (clase) LaTeX sencilla y en español para preparar certámenes y exámenes del Departamento de Industrias, UTFSM.\r\n\r\n## Uso\r\n\r\nAbra el archivo `example.tex`, modifique los parámetros básicos (curso, año, asignatura, etc.) y compile.\r\n\r\n## Requisitos\r\n\r\nLa clase `utfsm-exam` está basada en (y requiere de) la clase LaTeX `exam`.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
