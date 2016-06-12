@@ -72,8 +72,7 @@
     \textbf{\Large \curso}\\
    \textbf{\large Certamen \certamenNr}\\
     Programa \programa\\
-    Departamento de Industrias - UTFSM\\
-    \fecha
+    Departamento de Industrias - UTFSM
 }{}
 \runningheader{\curso\\Certamen \certamenNr}{}{Nombre:\line(1,0){250}}
 \firstpagefootrule
@@ -105,12 +104,15 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:\\}\enspace}
 
 \newcommand{\printHeader}{%
-\noindent\makebox[\textwidth]{%
-    Profesor:\enspace\profesor\enspace\hfill\enspace Ayudante:\enspace\ayudante
-}
+    \noindent\makebox[\textwidth]{%
+        \textbf{Profesor:}\enspace\profesor\enspace\hfill
+    }
+    \noindent\makebox[\textwidth]{%
+        \textbf{Ayudante:}\enspace\ayudante\hfill\textbf{Fecha:}\enspace\fecha
+    }
 
-\vspace{3mm}
-\noindent\makebox[\textwidth]{%
-    Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.15mm}
-}
+    \vspace{3mm}
+    \noindent\makebox[\textwidth]{%
+        Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.15mm}
+    }
 }
