@@ -68,13 +68,8 @@
 %\firstpageheadrule
 \runningheadrule
 \extraheadheight{5mm}
-\firstpageheader{}{%
-    \textbf{\Large \curso}\\
-   \textbf{\large Certamen \certamenNr}\\
-    Programa \programa\\
-    Departamento de Industrias - UTFSM
-}{}
-\runningheader{\curso\\Certamen \certamenNr}{}{Nombre:\line(1,0){250}}
+\firstpageheader{\includegraphics[height=2cm]{figures/logoutfsmind_h.png}}{}{\includegraphics[height=2cm]{figures/logoind.png}}
+\runningheader{\includegraphics[height=1.2cm]{figures/logoutfsmind_h.png}}{}{Certamen \certamenNr\ -\ \textbf{\curso}\\\programa\\Nombre:\line(1,0){250}}
 \firstpagefootrule
 \firstpagefooter{Departamento de Industrias, Universidad T\'ecnica Federico Santa Mar\'ia}
 {}
@@ -104,6 +99,13 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:\\}\enspace}
 
 \newcommand{\printHeader}{%
+    \hrule
+    \begin{center}
+      \textbf{\Large \curso}\\
+      \textbf{\large Certamen \certamenNr}\\
+      \programa\\
+    \end{center}
+    \hrule\vspace{5mm}
     \noindent\makebox[\textwidth]{%
         \textbf{Profesor:}\enspace\profesor\enspace\hfill
     }
