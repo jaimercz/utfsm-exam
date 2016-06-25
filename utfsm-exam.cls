@@ -41,7 +41,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{paralist}
 
-\RequirePackage[vcentering,top=1in,left=1in]{geometry}
+\RequirePackage[vcentering,top=1in,left=2cm]{geometry}
 
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -67,8 +67,8 @@
 \pagestyle{headandfoot}
 %\firstpageheadrule
 \runningheadrule
-\extraheadheight{5mm}
-\firstpageheader{\includegraphics[height=2cm]{figures/logoutfsmind_h.png}}{}{\includegraphics[height=2cm]{figures/logoind.png}}
+\extraheadheight{7mm}
+\firstpageheader{\includegraphics[height=1.75cm]{figures/logoutfsmind_h.png}}{}{\includegraphics[height=2cm]{figures/logoind.png}}
 \runningheader{\includegraphics[height=1.2cm]{figures/logoutfsmind_h.png}}{}{Certamen \certamenNr\ -\ \textbf{\curso}\\\programa\\Nombre:\line(1,0){250}}
 \firstpagefootrule
 \firstpagefooter{Departamento de Industrias, Universidad T\'ecnica Federico Santa Mar\'ia}
@@ -78,6 +78,8 @@
 \runningfooter{Departamento de Industrias,  Universidad T\'ecnica Federico Santa Mar\'ia}
 {}
 {P\'agina \thepage\ de \numpages}
+
+\definecolor{silver}{RGB}{210,210,220}
 
 \newcommand{\estudiante}[2][]{%
     \vspace*{0.2in}\\
@@ -99,13 +101,13 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:\\}\enspace}
 
 \newcommand{\printHeader}{%
-    \hrule
+    {\color{silver}\hrule}
     \begin{center}
       \textbf{\Large \curso}\\
       \textbf{\large Certamen \certamenNr}\\
       \programa\\
     \end{center}
-    \hrule\vspace{5mm}
+    {\color{silver}\hrule}\vspace{5mm}
     \noindent\makebox[\textwidth]{%
         \textbf{Profesor:}\enspace\profesor\enspace\hfill
     }
@@ -115,6 +117,6 @@
 
     \vspace{3mm}
     \noindent\makebox[\textwidth]{%
-        Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.15mm}
+        Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.1mm}
     }
 }
