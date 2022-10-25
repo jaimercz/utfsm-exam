@@ -41,12 +41,13 @@
 \RequirePackage{xcolor}
 \RequirePackage{paralist}
 
-\RequirePackage[vcentering,top=1in,left=2cm]{geometry}
+\RequirePackage[vcentering,top=2.25cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{graphicx}
+\usepackage{tikz}
 
 
 \colorgrids
@@ -63,13 +64,17 @@
 \chsword{Puntos obtenidos}
 \chtword{Total}
 
+\newcommand{\headerlogo}{%
+\begin{tikzpicture}[remember picture,overlay]
+    \node [xshift=0cm,yshift=2.5mm] {\includegraphics[width=3.5cm]{figures/logoutfsmind_v.png}};
+\end{tikzpicture}
+}
 
 \pagestyle{headandfoot}
 %\firstpageheadrule
 \runningheadrule
-\extraheadheight{7mm}
-\firstpageheader{\includegraphics[height=1.75cm]{figures/logoutfsmind_h.png}}{}{\includegraphics[height=2cm]{figures/logoind.png}}
-\runningheader{\includegraphics[height=1.2cm]{figures/logoutfsmind_h.png}}{}{Certamen \certamenNr\ -\ \textbf{\curso}\\\programa\\Nombre:\line(1,0){250}}
+\firstpageheader{}{\headerlogo}{}
+\runningheader{\includegraphics[height=1.4cm]{figures/logoutfsmind_h.png}}{}{\small Certamen \certamenNr\ -\ \textbf{\curso}\\\programa\\\bigskip Nombre:\line(1,0){250}}
 \firstpagefootrule
 \firstpagefooter{Departamento de Industrias, Universidad T\'ecnica Federico Santa Mar\'ia}
 {}
