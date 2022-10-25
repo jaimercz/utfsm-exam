@@ -1,0 +1,46 @@
+\documentclass[%
+    10pt,
+    letterpaper,
+    addpoints,
+%    answers        % Activar para mostrar las respuestas!
+]{utfsm-exam}
+
+\usepackage[utf8x]{inputenc}        % Linux or MacOS (with UTF-8)
+%\usepackage[latin1]{inputenc}       % Windows (or MacOS with Mac Roman).
+
+\newcommand{\curso}      {Introducción al \LaTeX}
+\newcommand{\certamenNr} {\#1}      % ej. #1, #2, Recuparativo, Final
+\newcommand{\programa}   {Magister en Ciencias de la Ingeniería Industrial}
+\newcommand{\fecha}      {20 de junio de 2022}
+\newcommand{\profesor}   {Nombre del Profesor(a)}
+\newcommand{\ayudante}   {Nombre del Ayudante}
+
+%\usepackage{txfonts}                % Times New Roman fonts.
+%\geometry{papersize={8.5in,13in},total={6.5in,11in}}    % Tamaño oficio.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\printHeader{}      % Print first page header
+%\centering
+%    Este certamen tiene \numquestions\ preguntas, con un total de \numpoints\ puntos.
+
+\instrucciones{Responda las preguntas en el espacio reservado para ello.}
+
+\begin{center}\footnotesize
+    \gradetable[h][questions]
+    \\\vspace{10mm}\line(1,0){200}
+\end{center}
+
+
+\begin{questions}
+    \shadedsolutions
+    %\bracketedpoints
+    \pointpoints{Punto}{Puntos}
+    \pointsinrightmargin
+    \marginpointname{Pts.}
+
+    \input{qs} % Questions File
+
+\end{questions}
+\end{document}

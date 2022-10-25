@@ -41,12 +41,13 @@
 \RequirePackage{xcolor}
 \RequirePackage{paralist}
 
-\RequirePackage[vcentering,top=1in,left=1in]{geometry}
+\RequirePackage[vcentering,top=2.25cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{graphicx}
+\usepackage{tikz}
 
 
 \colorgrids
@@ -63,18 +64,17 @@
 \chsword{Puntos obtenidos}
 \chtword{Total}
 
+\newcommand{\headerlogo}{%
+\begin{tikzpicture}[remember picture,overlay]
+    \node [xshift=0cm,yshift=2.5mm] {\includegraphics[width=3.5cm]{figures/logoutfsmind_v.png}};
+\end{tikzpicture}
+}
 
 \pagestyle{headandfoot}
 %\firstpageheadrule
 \runningheadrule
-\extraheadheight{5mm}
-\firstpageheader{}{%
-    \textbf{\Large \curso}\\
-   \textbf{\large Certamen \certamenNr}\\
-    Programa \programa\\
-    Departamento de Industrias - UTFSM
-}{}
-\runningheader{\curso\\Certamen \certamenNr}{}{Nombre:\line(1,0){250}}
+\firstpageheader{}{\headerlogo}{}
+\runningheader{\includegraphics[height=1.4cm]{figures/logoutfsmind_h.png}}{}{\small Certamen \certamenNr\ -\ \textbf{\curso}\\\programa\\\bigskip Nombre:\line(1,0){250}}
 \firstpagefootrule
 \firstpagefooter{Departamento de Industrias, Universidad T\'ecnica Federico Santa Mar\'ia}
 {}
@@ -83,6 +83,8 @@
 \runningfooter{Departamento de Industrias,  Universidad T\'ecnica Federico Santa Mar\'ia}
 {}
 {P\'agina \thepage\ de \numpages}
+
+\definecolor{silver}{RGB}{210,210,220}
 
 \newcommand{\estudiante}[2][]{%
     \vspace*{0.2in}\\
@@ -104,6 +106,13 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:\\}\enspace}
 
 \newcommand{\printHeader}{%
+    {\color{silver}\hrule}
+    \begin{center}
+      \textbf{\Large \curso}\\
+      \textbf{\large Certamen \certamenNr}\\
+      \programa\\
+    \end{center}
+    {\color{silver}\hrule}\vspace{5mm}
     \noindent\makebox[\textwidth]{%
         \textbf{Profesor:}\enspace\profesor\enspace\hfill
     }
@@ -113,6 +122,6 @@
 
     \vspace{3mm}
     \noindent\makebox[\textwidth]{%
-        Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.15mm}
+        Nombre:\enspace\hrulefill\enspace ROL:\enspace\rule{30mm}{0.1mm}
     }
 }
